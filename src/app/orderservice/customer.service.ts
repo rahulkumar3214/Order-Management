@@ -61,26 +61,14 @@ export class CustomerService {
      populateForm(customer) {
       //this.form.setValue(customer);
        this.form.setValue(customer);
-       
-      
-      //  var addData= this.customer.orderNumber;
+              //  var addData= this.customer.orderNumber;
       //      var indexCustomer = this.customerArray.findIndex(
       //      customer => customer.orderNumber==="this.customerArray.orderNumber");
       //      if(addData == this.customerArray[indexCustomer].orderNumber){
       //    this.customerArray=this.customerArray.splice(indexCustomer,1,this.form.value);
       //  }
       }
-    // updateCustomer(customer){
-    //   this.customerArray.({
-    //   orderNumber: customer.orderNumber,
-    //   orderDueDate: customer.orderDueDate,
-    //   buyerName: customer.buyerName,
-    //   address: customer.address,
-    //   phone: customer.phone,
-    //   totalOrder: customer.totalOrder
-    //   });
-    //}
-  
+
     // deleteCustomer($key: string) {
     //   this.customerList.remove($key);
     }

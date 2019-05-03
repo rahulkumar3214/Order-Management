@@ -29,8 +29,7 @@ onSubmit(){
   if(this.customerService.form.valid){
     // if(this.customerService.form.value! == null)
       this.customerService.insertCustomer(this.customerService.form.value);
-      
-    //    else
+          //    else
     //  this.customerService.updateCustomer(this.customerService.form.value);
      this.showSuccessmessage=true;
      setTimeout(() => this.showSuccessmessage = false, 3000);

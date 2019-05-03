@@ -13,14 +13,13 @@ import {CookieService} from 'angular2-cookie/core';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-newPage: boolean;
-loginForm: FormGroup;
+    newPage: boolean;
+    loginForm: FormGroup;
     loading = false;
     submitted = false;
     returnUrl: string;
-  authenticationService: any;
-  alertService: any;
-
+    authenticationService: any;
+    alertService: any;
     constructor(
         private formBuilder: FormBuilder,
         private route: ActivatedRoute,
@@ -67,18 +66,11 @@ loginForm: FormGroup;
       //             this.loading = false;
       //         });
   }
-
-  public Formdata:any = {};
-
-        
+  public Formdata:any = {};  
         submitData() {
        this._cookieService.put('username',this.Formdata.username);
        this._cookieService.put('password',this.Formdata.password);
        this._cookieService.put('remember',this.Formdata.rememberme);
     }
-  
-
-
-
 
 }
