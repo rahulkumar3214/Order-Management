@@ -1,0 +1,61 @@
+<div class="row">
+  <div class="col-md-5">
+    <form [formGroup]="this.customerService.form" (ngSubmit)="onSubmit()">
+      <!-- <input type="hidden" formControlName="$key"> -->
+      <div class="form-group">
+        <label>orderNumber</label>
+        <input formControlName="orderNumber" class="form-control" 
+        [ngClass]="{'is-invalid':submitted && formControls.orderNumber.errors}">
+        <div class="invalid-feedback" *ngIf="submitted && formControls.orderNumber.errors">
+          the field is required
+        </div>
+      </div>
+       <div class="form-group">
+          <label>orderDueDate</label>
+          <input type="date" formControlName="orderDueDate" class="form-control" 
+          [ngClass]="{'is-invalid':submitted && formControls.orderDueDate.errors}">
+          <div class="invalid-feedback" *ngIf="submitted && formControls.orderDueDate.errors">
+          </div>
+      </div>
+       <div class="form-group">
+          <label>buyerName</label>
+          <input formControlName="buyerName" class="form-control"
+          [ngClass]="{'is-invalid':submitted && formControls.buyerName.errors}">
+         <div class="invalid-feedback" *ngIf="submitted && formControls.buyerName.errors">
+          the field is required
+         </div>
+      </div>
+       <div class="form-group">
+          <label>address</label>
+          <input formControlName="address" class="form-control"
+           [ngClass]="{'is-invalid': submitted && formControls.address.errors}">
+       <div class="invalid-feedback" *ngIf="submitted && formControls.address.errors">
+       </div>
+       </div> 
+      <div class="form-group">
+          <label>phone</label>
+          <input formControlName="phone" class="form-control" 
+          [ngClass]="{'is-invalid':submitted && formControls.phone.errors}">
+          <div class="invalid-feedback" *ngIf="submitted && formControls.phone.errors">
+
+          </div>
+      </div>
+      <div class="form-group">
+          <label>totalOrder</label>
+          <input formControlName="totalOrder" class="form-control"
+           [ngClass]="{'is-invalid':submitted && formControls.totalOrder.errors}">
+          <div class="invalid-feedback" *ngIf="submitted && formControls.totalOrder.errors"></div>
+      </div> 
+      <div class="form-group">
+        <input type="submit" class="btn btn-primary" value="submit">
+      </div>
+    </form>
+    <div class="alert alert-info" *ngIf="showSuccessMessage">
+      customer added successfully
+    </div>
+  </div>
+  <div class="col-md-7">
+    <app-customer-list></app-customer-list>
+  </div>
+  
+</div>
