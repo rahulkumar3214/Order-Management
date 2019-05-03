@@ -13,7 +13,7 @@ import { CustomerListComponent } from './customer-list/customer-list.component';
 import { CustomerService } from './orderservice/customer.service';
 import { environment } from '../environments/environment';
 import { LoginComponent } from './login/login.component';
-import { MbscModule } from '@mobiscroll/angular';
+//import { MbscModule } from '@mobiscroll/angular';
 
 
 @NgModule({
@@ -25,7 +25,7 @@ import { MbscModule } from '@mobiscroll/angular';
   ],
   imports: [
     BrowserModule,
-    MbscModule,
+    //MbscModule,
     ReactiveFormsModule,
     //AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireDatabaseModule,
